@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.body-main {
+    max-width: 1440px;
+}
+.header-wrapper {
+    max-width: 1320px;
+    display: flex;
+    justify-content: space-between;
+    padding: 31px 0;
+    margin: 0 auto;
+}
+.left-header {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    padding: 0 32px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    color: #23262F;
+    position: relative;
+}
+.logo:before {
+    content: "";
+    position: absolute;
+    background: url("../img/symbol.png") no-repeat center center;
+    background-size: cover;
+    width: 64px;
+    height: 64px;
+    left: -5%;
+    top: -40%;
+}
+.logo:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    border: none;
+    background: #E6E8EC;
+    right: 0;
+}
+.discover, .how-it-work {
+    margin: 0 32px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    color: #777E91;
+}
+.right-header {
+    display: flex;
+    align-items: center;
+}
+.search-input {
+    border: 2px solid #E6E8EC;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #777E91;
+    width: 256px;
+}
+.notification {
+    position: relative;
+    margin: 0 20px;
+}
+.notification:before {
+    content: "";
+    position: absolute;
+    background: #45B36B;
+    border-radius: 8px;
+    width: 12px;
+    height: 12px;
+    top: -10px;
+    right: -10px;
+}
+.notification-wrapper {
+    position: absolute;
+    padding: 40px 32px;
+    display: none;
+    width: 396px;
+    background: #FCFCFD;
+    top: 80px;
+    left: -190px;
+}
+.notification-wrapper.active {
+    display: block;
+}
+.notification-wrapper:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 1rem solid #FCFCFD;
+    border-radius: 5px;
+    transform:translateX(-50%) rotate(45deg);
+    top: -10px;
+    left: 50%;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+.item-img {
+    border-radius: 16px;
+    width: 64px;
+    height: 64px;
+    margin-right: 15px;
+}
+.notification-title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: #23262F;
+}
+.seall-btn {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #FCFCFD;
+    padding: 12px 16px;
+    background: #3772FF;
+    border-radius: 90px;
+    text-decoration: none;
+}
+.receive-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FCFCFD;
+    border-radius: 16px;
+    padding: 16px;
+}
+.receive-item:hover {
+    background: #F4F5F6;
+}
+.item-content {
+    display: flex;
+    align-items: center;
+}
+.receive-item-info {
+    margin: 0 10px;
+}
+.receive-title {
+    font-weight: 500;
+    font-size: 16px;
+    color: #141416;
+    margin-bottom: 10px;
+}
+.item-receive-count {
+    font-weight: 500;
+    font-size: 14px;
+    color: #353945;
+    margin-bottom: 10px;
+}
+.item-receive-date {
+    font-weight: 400;
+    font-size: 12px;
+    color: #777E91;
+}
+.receive-icon {
+    width: 12px;
+    height: 12px;
+    background: #3772FF;
+    border-radius: 16px;
+}
+.upload-btn {
+    text-decoration: none;
+    padding: 12px 16px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #FCFCFD;
+    background: #3772FF;
+    border-radius: 90px;
+    margin: 0 10px;
+}
+.wallet {
+    display: flex;
+    align-items: center;
+    border: 2px solid #E6E8EC;
+    border-radius: 90px;
+    padding: 2px;
+    text-decoration: none;
+}
+.avatar {
+    background: #45B36B;
+    border-radius: 25px;
+    margin-right: 12px;
+}
+.crypto-count {
+    font-weight: 700;
+    font-size: 14px;
+    color: #23262F;
+    margin-right: 4px;
+}
+.cryptocurrency {
+    font-weight: 700;
+    font-size: 14px;
+    color: #45B36B;
+    margin-right: 4px;
+}
+.slider-main {
+    background: url("../img/slider.png") no-repeat center;
+    background-size: cover;
+    max-width: 1440px;
+    height: 300px;
+}
+@media screen and (max-width: 1024px) {
+    .logo:after, .discover, .how-it-work {
+        display: none;
+    }
+}
+@media screen and (max-width: 620px) {
+    .search-input,.upload-btn,.crypto-count,.cryptocurrency {
+        display: none
+    }
+    .wallet {
+        border: none;
+    }
+}
